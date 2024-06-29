@@ -13,6 +13,7 @@ import type { ReactNode } from 'react';
 import { Popup, PopupContent, PopupTrigger } from 'fumadocs-ui/twoslash/popup';
 import { Wrapper } from '@/components/preview/wrapper';
 import YouTube from '@/components/youtube';
+import Gallery from '@/components/gallery';
 import { cn } from './utils/cn';
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
@@ -34,6 +35,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     Accordions,
     Wrapper,
     YouTube,
+    Gallery,
     InstallTabs: ({
       items,
       children,

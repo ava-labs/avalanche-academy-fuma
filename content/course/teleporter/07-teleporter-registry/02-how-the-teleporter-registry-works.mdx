@@ -7,11 +7,11 @@ authors: [ashucoder9]
 
 TeleporterRegistry keeps track of TeleporterMessenger contract versions. Cross-Subnet dApps can request the latest or a specific version of the TeleporterMessenger:
 
-<img src="/academy/course-images/teleporter/teleporter-registry.png" width="600" class="mx-auto"/>
+<img src="/academy/common-images/teleporter/teleporter-registry.png" width="600" class="mx-auto"/>
 
 Internally the TeleporterRegistry maintains a mapping of TeleporterMessenger contract versions to their addresses.
 
-<img src="/academy/course-images/teleporter/teleporter-registry-class-diagram.png" width="400" class="mx-auto"/>
+<img src="/academy/common-images/teleporter/teleporter-registry-class-diagram.png" width="400" class="mx-auto"/>
 
 Each registry's mapping of version to contract address is independent of registries on other blockchains, and chains can decide on their own registry mapping entries. So the contract of version 4 on one chain does not have to be equal to that version on another chain.
 

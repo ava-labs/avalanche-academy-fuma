@@ -66,7 +66,6 @@ const withMDX = createMDX({
         },
       ],
     },
-    lastModifiedTime: 'git',
     remarkPlugins: [
       remarkMath,
       [remarkInstall, { Tabs: 'InstallTabs' }],

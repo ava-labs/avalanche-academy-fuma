@@ -7,7 +7,7 @@ authors: [ashucoder9]
 
 When the AWM Relayer detects a new message, it collects the signatures of that message from the validators of the source Subnet. The validator uses the BLS private key corresponding to their  BLS public key (registered on the P-Chain) to create a signature for the unsigned warp message we've learned about earlier (in the Warp Message Format).
 
-![](/course-images/awm/relayer-pickup.png)
+![](/common-images/awm/relayer-pickup.png)
 
 The AWM Relayer does not necessarily need to collect the signature of all validators. It only needs to ensure that the validators of the collected signatures represent a sufficiently large share of the total stake of the Subnet. It is up to the receiving Subnet to determine what the threshold is.
 

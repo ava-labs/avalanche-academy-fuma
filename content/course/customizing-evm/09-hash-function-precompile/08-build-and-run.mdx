@@ -1,0 +1,60 @@
+---
+title: Build and Run
+description: Learn how to build and run your custom VM on a local network.
+updated: 2024-05-31
+authors: [ashucoder9]
+icon: Terminal
+---
+
+## Build Your Custom VM
+
+There's a simple build script in the Precompile-EVM we can utilize to build. First, make sure you are in the root folder of you Precompile-EVM:
+
+```bash
+cd $GOPATH/src/github.com/ava-labs/precompile-evm
+```
+
+Then run the command to initiate the build script:
+
+```bash
+./scripts/build.sh
+```
+
+If you do not see any error, the build was successful.
+
+## Run a Local Network with Your Custom VM
+
+First, make sure the gRPC of the Avalanche Network Runner is running. If not, start it with:
+
+```bash
+avalanche-network-runner server \
+--log-level debug \
+--port=":8080" \
+--grpc-gateway-port=":8081"
+```
+
+<Accordions>
+<Accordion title="Troubleshooting Error: `listen tcp :8080: bind: address already in use'">
+
+If the above command fails with the error: "listen tcp :8080: bind: address already in use", then your server is probably still running from the previous exercise.
+
+To see what is running on port 8080 run the following command: `sudo lsof -i tcp:8080`
+
+You can kill the process by using the PID stated in the earlier output: `sudo kill -9 <PID here>`
+
+Now run the command above again and everything should work as expected.
+
+</Accordion>
+</Accordions>
+
+If it wasn't running, start a network with the blockchain spec like we did in the [previous chapter](./content/course/customizing-evm/07-your-evm-blockchain/02-create-your-blockchain.mdx).
+
+If it was still running, we do not need to call the `control start` command, but can simply add a new blockchain to the already running local network using the HTTP Client. Don't forget to add the path to your new `md5.json` genesis file.
+
+![](/course/customizing-evm/29.png)
+
+Alternatively, you can also open a new terminal and issue the following command to create the new blockchain:
+
+```bash
+avalanche-network-runner control create-blockchains '[{"vm_name":"subnetevm","genesis":"tests/precompile/genesis/sha256.json"}]'
+```

@@ -4,7 +4,6 @@ import Link, { type LinkProps } from 'next/link';
 import Image from 'next/image';
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/utils/cn';
-import Spot from '@/public/spot.png';
 
 const cardIconVariants = cva(
   'mb-2 size-9 rounded-lg border p-1 shadow-sm shadow-primary/50',
@@ -24,13 +23,6 @@ export default function DocsPage(): React.ReactElement {
         />
       </div>
       <div className="absolute inset-0 z-[-1] select-none overflow-hidden opacity-30">
-        <Image
-          alt="spot"
-          src={Spot}
-          sizes="100vw"
-          className="size-full min-w-[800px] max-w-container"
-          priority
-        />
       </div>
       <h1 className="mb-4 text-4xl font-semibold md:text-5xl">
         Getting Started

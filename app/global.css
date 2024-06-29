@@ -43,3 +43,30 @@
   padding: 0 16px;
 }
 
+svg.lucide.lucide-box, svg.lucide.lucide-layers {
+  color: #E84142;
+}
+
+svg.lucide.lucide-bookmark {
+    color: #b821d5;
+}
+
+svg.lucide.lucide-terminal {
+    color: #ff5e13;
+}
+
+svg.lucide.lucide-users {
+    color: #8b54ff;
+}
+
+svg.lucide.lucide-binary {
+    color: #ce3427;
+}
+
+svg.lucide.lucide-rocket {
+    color: #ff2e2ec4;
+}
+
+svg.lucide.lucide-send {
+  color: #0070ff;
+}

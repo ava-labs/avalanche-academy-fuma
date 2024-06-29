@@ -134,7 +134,7 @@ export function generateMetadata({ params }: { params: Param }): Metadata {
   if (!page) notFound();
 
   const description =
-    page.data.description ?? 'The library for building documentation sites';
+    page.data.description ?? 'Learn how to build on Avalanche blockchain with Academy';
 
   const imageParams = new URLSearchParams();
   imageParams.set('title', page.data.title);
